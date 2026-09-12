@@ -1,4 +1,4 @@
-# ⚡ photonic-dolly
+# ⚡ subpixel
 
 ### 🎬 Ultra-Realistic 3D Cinematic Tesla Experience & Digital Showroom
 
