@@ -5,7 +5,7 @@
 > **A viewport-driven 60 FPS cinematic camera rig featuring multi-plane stereoscopic parallax, forward Z-axis dolly translation, rotational perspective dissipation (`rotateX`), and photographic depth-of-field blur — architected entirely atop hardware-composited CSS 3D context matrixing and sub-pixel LERP physics with zero runtime bundle overhead.**
 
 
-https://subpixel-three.vercel.app/
+
 
 
 [![Vanilla JS](https://img.shields.io/badge/Stack-Vanilla%20ES6%2B-black?style=for-the-badge&logo=javascript&logoColor=F7DF1E)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
@@ -14,7 +14,12 @@ https://subpixel-three.vercel.app/
 [![Zero Dependencies](https://img.shields.io/badge/Dependencies-0%20(Pure%20Native)-black?style=for-the-badge&logo=speedtest&logoColor=00FF66)](.)
 [![FPS](https://img.shields.io/badge/Performance-60%20FPS%20Locked-black?style=for-the-badge&logo=googlechrome&logoColor=white)](.)
 
----
+
+
+https://subpixel-three.vercel.app/
+
+
+
 
 ## 🌌 Overview
 
