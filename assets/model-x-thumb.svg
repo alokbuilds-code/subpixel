@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 70" width="120" height="70">
+  <rect width="120" height="70" rx="8" fill="#0b0d12"/>
+  <!-- Model X SUV Profile with Falcon Wings Silhouette -->
+  <path d="M 12 45 C 16 38 28 35 38 30 C 46 22 62 20 78 22 C 90 24 100 34 106 42 C 109 45 108 48 104 48 L 14 48 C 11 48 10 46 12 45 Z" fill="#2d323d" stroke="#525a6c" stroke-width="1"/>
+  <!-- Falcon Wing lines -->
+  <path d="M 50 21 L 68 14 L 78 22" stroke="#60a5fa" stroke-width="1.5" fill="none"/>
+  <circle cx="16" cy="44" r="2" fill="#ffffff"/>
+  <circle cx="28" cy="48" r="8" fill="#181a20" stroke="#71717a" stroke-width="2"/>
+  <circle cx="92" cy="48" r="8" fill="#181a20" stroke="#71717a" stroke-width="2"/>
+  <text x="60" y="62" fill="#ffffff" font-family="sans-serif" font-size="7" font-weight="600" text-anchor="middle" letter-spacing="1">MODEL X</text>
+</svg>

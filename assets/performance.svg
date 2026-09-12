@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0c10"/>
+      <stop offset="50%" stop-color="#12151c"/>
+      <stop offset="100%" stop-color="#050608"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7a8290"/>
+      <stop offset="50%" stop-color="#3d424c"/>
+      <stop offset="100%" stop-color="#1f2228"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e82127" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#e82127" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="battery" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1a1e27"/>
+      <stop offset="50%" stop-color="#2a303f"/>
+      <stop offset="100%" stop-color="#1a1e27"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="360" fill="url(#bg)"/>
+  <circle cx="300" cy="180" r="180" fill="url(#glow)"/>
+
+  <!-- Grid lines -->
+  <g stroke="rgba(255,255,255,0.05)" stroke-width="1">
+    <line x1="0" y1="90" x2="600" y2="90"/>
+    <line x1="0" y1="180" x2="600" y2="180"/>
+    <line x1="0" y1="270" x2="600" y2="270"/>
+    <line x1="150" y1="0" x2="150" y2="360"/>
+    <line x1="300" y1="0" x2="300" y2="360"/>
+    <line x1="450" y1="0" x2="450" y2="360"/>
+  </g>
+
+  <!-- Rolling Chassis Platform -->
+  <!-- Main Structural Frame -->
+  <rect x="140" y="100" width="320" height="160" rx="16" fill="url(#battery)" stroke="#3a4050" stroke-width="2"/>
+
+  <!-- Battery cell segments -->
+  <g fill="#14171f" stroke="#252a36" stroke-width="1.5">
+    <rect x="160" y="115" width="60" height="130" rx="4"/>
+    <rect x="230" y="115" width="60" height="130" rx="4"/>
+    <rect x="300" y="115" width="60" height="130" rx="4"/>
+    <rect x="370" y="115" width="70" height="130" rx="4"/>
+  </g>
+
+  <!-- High-voltage neon conduits -->
+  <path d="M 160 180 L 440 180" stroke="#e82127" stroke-width="3" stroke-dasharray="8 6" opacity="0.85"/>
+
+  <!-- Front Drive Unit / Motor -->
+  <rect x="110" y="150" width="45" height="60" rx="6" fill="url(#metal)" stroke="#555d6c" stroke-width="2"/>
+  <!-- Front Axle -->
+  <line x1="132" y1="70" x2="132" y2="290" stroke="#4a505e" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- Dual Rear Drive Units -->
+  <rect x="445" y="140" width="55" height="80" rx="8" fill="url(#metal)" stroke="#e82127" stroke-width="2"/>
+  <!-- Rear Axle -->
+  <line x1="472" y1="65" x2="472" y2="295" stroke="#4a505e" stroke-width="10" stroke-linecap="round"/>
+
+  <!-- 4 Wheels & Performance Brembo Calipers -->
+  <!-- Front Left -->
+  <rect x="106" y="50" width="52" height="26" rx="5" fill="#181a20" stroke="#505766" stroke-width="2"/>
+  <rect x="118" y="52" width="12" height="22" rx="2" fill="#e82127"/>
+  <!-- Front Right -->
+  <rect x="106" y="284" width="52" height="26" rx="5" fill="#181a20" stroke="#505766" stroke-width="2"/>
+  <rect x="118" y="286" width="12" height="22" rx="2" fill="#e82127"/>
+  <!-- Rear Left -->
+  <rect x="446" y="44" width="56" height="30" rx="5" fill="#181a20" stroke="#505766" stroke-width="2"/>
+  <rect x="460" y="46" width="14" height="26" rx="2" fill="#e82127"/>
+  <!-- Rear Right -->
+  <rect x="446" y="286" width="56" height="30" rx="5" fill="#181a20" stroke="#505766" stroke-width="2"/>
+  <rect x="460" y="288" width="14" height="26" rx="2" fill="#e82127"/>
+
+  <!-- Carbon Fiber Subframe Accents -->
+  <path d="M 155 110 L 210 75 M 155 250 L 210 285 M 445 110 L 390 70 M 445 250 L 390 290" stroke="#6b7280" stroke-width="2" stroke-linecap="round"/>
+</svg>

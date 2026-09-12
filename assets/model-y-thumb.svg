@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 70" width="120" height="70">
+  <rect width="120" height="70" rx="8" fill="#0b0d12"/>
+  <path d="M 14 45 C 18 39 28 35 38 29 C 48 24 64 23 78 25 C 90 27 100 36 104 43 C 107 45 106 48 102 48 L 16 48 C 13 48 12 46 14 45 Z" fill="#383d4a" stroke="#6b7280" stroke-width="1"/>
+  <path d="M 40 30 C 50 25 64 24 76 26 C 84 27 90 32 94 37 L 42 37 Z" fill="#0f172a"/>
+  <circle cx="18" cy="44" r="2" fill="#ffffff"/>
+  <circle cx="30" cy="48" r="8" fill="#181a20" stroke="#71717a" stroke-width="2"/>
+  <circle cx="90" cy="48" r="8" fill="#181a20" stroke="#71717a" stroke-width="2"/>
+  <text x="60" y="62" fill="#ffffff" font-family="sans-serif" font-size="7" font-weight="600" text-anchor="middle" letter-spacing="1">MODEL Y</text>
+</svg>

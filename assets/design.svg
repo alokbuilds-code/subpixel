@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360">
+  <defs>
+    <linearGradient id="body-paint" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a2d36"/>
+      <stop offset="35%" stop-color="#15171d"/>
+      <stop offset="85%" stop-color="#090a0d"/>
+      <stop offset="100%" stop-color="#020304"/>
+    </linearGradient>
+    <linearGradient id="taillight-red" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff4d4f"/>
+      <stop offset="50%" stop-color="#e82127"/>
+      <stop offset="100%" stop-color="#820004"/>
+    </linearGradient>
+    <radialGradient id="light-glow" cx="60%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e82127" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#e82127" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="specular" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="30%" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Dark Atmospheric Studio Background -->
+  <rect width="600" height="360" fill="#07080b"/>
+
+  <!-- Sculpted Car Rear Quarter Panel -->
+  <!-- Fastback roofline slope to trunk lid -->
+  <path d="M 0 100 Q 180 80 340 140 Q 480 185 600 210 L 600 360 L 0 360 Z" fill="url(#body-paint)"/>
+
+  <!-- Specular Reflection Highlight along the shoulder curve -->
+  <path d="M 40 105 Q 220 88 360 148 Q 460 188 580 212" stroke="url(#specular)" stroke-width="4" fill="none" opacity="0.8"/>
+
+  <!-- Glowing LED Taillight Blade Architecture -->
+  <circle cx="430" cy="185" r="90" fill="url(#light-glow)"/>
+
+  <!-- The sculpted red taillight cluster -->
+  <path d="M 280 170 Q 360 162 440 172 Q 520 185 570 205 Q 520 200 440 190 Q 360 182 280 170 Z" fill="url(#taillight-red)" stroke="#ff4d4f" stroke-width="1.5"/>
+
+  <!-- Sharp secondary LED diffuser blade underneath -->
+  <path d="M 330 195 Q 420 192 480 202" stroke="#ff7875" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- Integrated Carbon Rear Diffuser / Aero Lip -->
+  <path d="M 200 280 Q 400 270 600 300 L 600 340 Q 400 320 200 330 Z" fill="#14161c" stroke="#2a2e38" stroke-width="1.5"/>
+
+  <!-- Sleek Design Spec Text -->
+  <g transform="translate(40, 40)">
+    <text x="0" y="0" fill="#9ca3af" font-family="sans-serif" font-size="9" letter-spacing="1.5">DRAG COEFFICIENT</text>
+    <text x="0" y="24" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="20" font-weight="700">0.208 Cd</text>
+    <text x="0" y="38" fill="#6b7280" font-family="sans-serif" font-size="10">Lowest aerodynamic drag of any production vehicle</text>
+  </g>
+</svg>

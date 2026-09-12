@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tesla | Electric Cars, Solar & Clean Energy</title>
+  <meta name="description" content="Experience the pinnacle of electric performance, autonomous driving, and minimalist automotive luxury with Tesla.">
+  <link rel="icon" href="assets/model-s-thumb.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       1. TESLA CINEMATIC ENTRY OVERLAY (Pure Black 100vh x 100vw, z-index: 999999)
+       ========================================================================== -->
+  <div id="tesla-intro" aria-hidden="false">
+    <div class="tesla-wordmark" id="tesla-wordmark">TESLA</div>
+  </div>
+
+  <!-- ==========================================================================
+       2. MAIN WEBSITE CONTAINER (Initially opacity: 0; visibility: hidden)
+       ========================================================================== -->
+  <main id="website">
+
+    <!-- TOP NAVIGATION BAR (Layer 5: z-index: 50) -->
+    <header id="site-header">
+      <a href="#hero" class="brand-logo" aria-label="Tesla Home">
+        <svg viewBox="0 0 342 35" width="120" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 .1a9.7 9.7 0 0 0 7 7h11v27h7.8V7.1h11a9.7 9.7 0 0 0 7-7H0zm68.3 0c-4.7 0-8.5 3.8-8.5 8.5v18.4c0 4.7 3.8 8.5 8.5 8.5h27.3v-6.9H68.3c-.9 0-1.6-.7-1.6-1.6v-5.2h28.9v-6.9H66.7v-5.2c0-.9.7-1.6 1.6-1.6h28.9V.1H68.3zm76.5 0a8.5 8.5 0 0 0-8.5 8.5v3.4a8.5 8.5 0 0 0 8.5 8.5h18.8c.9 0 1.6.7 1.6 1.6v5.2c0 .9-.7 1.6-1.6 1.6H136v6.9h27.3a8.5 8.5 0 0 0 8.5-8.5v-3.4a8.5 8.5 0 0 0-8.5-8.5H144.5c-.9 0-1.6-.7-1.6-1.6v-5.2c0-.9.7-1.6 1.6-1.6h28.9V.1h-28.7zm76.6 0v27.2h21.1v6.9h-28.9V.1h7.8zm76.5 0-15.6 35.5h8.5l3.2-7.3h19.4l3.2 7.3h8.5L304.8.1h-6.9zm3.5 8.2 6.6 15.2h-13.3l6.7-15.2z" fill="currentColor"/>
+        </svg>
+      </a>
+
+      <nav class="nav-center" aria-label="Main Navigation">
+        <a href="#showroom" class="nav-link">Vehicles</a>
+        <a href="#battery-section" class="nav-link">Energy</a>
+        <a href="#charging-section" class="nav-link">Charging</a>
+        <a href="#autonomy-section" class="nav-link">Discover</a>
+        <a href="#configurator" class="nav-link">Shop</a>
+      </nav>
+
+      <div class="nav-right">
+        <button id="audio-toggle" class="audio-toggle-btn" aria-label="Toggle Luxury Sound" title="Toggle Sound">
+          <span class="audio-waves">
+            <span class="audio-bar"></span>
+            <span class="audio-bar"></span>
+            <span class="audio-bar"></span>
+          </span>
+          <span class="audio-label">Sound Off</span>
+        </button>
+
+        <button class="nav-icon-btn" aria-label="Search">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+
+        <button class="nav-icon-btn" aria-label="Account">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </button>
+
+        <a href="#configurator" class="nav-cta-btn open-checkout-trigger">Order Now</a>
+
+        <button id="mobile-menu-trigger" class="mobile-menu-trigger" aria-label="Open Mobile Navigation">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav-overlay" class="mobile-nav-overlay">
+      <div class="mobile-nav-header">
+        <span class="brand-logo" style="font-family: var(--font-display); font-weight: 700; letter-spacing: 0.3em;">TESLA</span>
+        <button id="mobile-nav-close" class="nav-icon-btn" aria-label="Close Mobile Navigation">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a href="#showroom" class="mobile-nav-link">Vehicles</a></li>
+        <li><a href="#performance-section" class="mobile-nav-link">Performance</a></li>
+        <li><a href="#autonomy-section" class="mobile-nav-link">Autonomy & FSD</a></li>
+        <li><a href="#interior-section" class="mobile-nav-link">Interior</a></li>
+        <li><a href="#charging-section" class="mobile-nav-link">Charging</a></li>
+        <li><a href="#configurator" class="mobile-nav-link">Configurator</a></li>
+      </ul>
+    </div>
+
+    <!-- HERO SECTION (Single Instance, Clean Layer Hierarchy) -->
+    <section id="hero">
+      <!-- Layer 1: Background Vehicle Image (z-index: 1) -->
+      <div class="hero-backdrop-container">
+        <img id="hero-backdrop-img" class="hero-backdrop-image" src="hero-clean.jpg" alt="Tesla Model S" onerror="this.onerror=null; this.src='picture.png'">
+      </div>
+
+      <!-- Layer 2: Atmosphere Gradients (z-index: 2) -->
+      <div class="hero-gradient-overlay"></div>
+      <div class="hero-vignette-overlay"></div>
+
+      <!-- Layer 4: Single Hero Content Container (z-index: 10) -->
+      <div class="hero-content">
+        <span id="hero-eyebrow" class="hero-eyebrow">THE ALL-NEW</span>
+        <h1 id="hero-model-headline" class="hero-headline">Model S</h1>
+        <h2 id="hero-subheadline" class="hero-subheadline">Relentless Performance. Timeless Design.</h2>
+        <p id="hero-description" class="hero-description">
+          Experience the next generation of electric driving with industry-leading range, cutting-edge technology, and a design that moves the world forward.
+        </p>
+
+        <!-- Dual CTA Buttons -->
+        <div class="hero-cta-group">
+          <a href="#configurator" class="btn-primary">Order Now</a>
+          <a href="#showroom" class="btn-secondary">Explore</a>
+        </div>
+
+        <!-- Single Performance Metrics Panel -->
+        <div class="hero-metrics-panel">
+          <div class="spec-item">
+            <span id="hero-accel-val" class="spec-value">1.99s</span>
+            <span class="spec-label">0–60 mph</span>
+          </div>
+          <div class="spec-item">
+            <span id="hero-range-val" class="spec-value">405 mi</span>
+            <span class="spec-label">Range (est.)</span>
+          </div>
+          <div class="spec-item">
+            <span id="hero-top-speed-val" class="spec-value">200 mph</span>
+            <span class="spec-label">Top Speed</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Layer 6: Single Right-Side Vehicle Selector (z-index: 20) -->
+      <div class="hero-vehicle-selector">
+        <div class="selector-header">
+          <span id="selector-counter" class="selector-counter">01 / 04</span>
+          <div class="selector-arrows">
+            <button id="selector-prev" class="arrow-btn" aria-label="Previous Vehicle">&lt;</button>
+            <button id="selector-next" class="arrow-btn" aria-label="Next Vehicle">&gt;</button>
+          </div>
+        </div>
+
+        <div class="vehicle-stack">
+          <!-- Model S -->
+          <div class="vehicle-stack-item active" data-model="modelS">
+            <div class="vehicle-stack-thumb">
+              <img src="assets/model-s-thumb.svg" alt="Model S" onerror="this.onerror=null; this.src='assets/fallback.svg'">
+            </div>
+            <span class="vehicle-stack-name">Model S</span>
+          </div>
+
+          <!-- Model 3 -->
+          <div class="vehicle-stack-item" data-model="model3">
+            <div class="vehicle-stack-thumb">
+              <img src="assets/model-3-thumb.svg" alt="Model 3" onerror="this.onerror=null; this.src='assets/fallback.svg'">
+            </div>
+            <span class="vehicle-stack-name">Model 3</span>
+          </div>
+
+          <!-- Model X -->
+          <div class="vehicle-stack-item" data-model="modelX">
+            <div class="vehicle-stack-thumb">
+              <img src="assets/model-x-thumb.svg" alt="Model X" onerror="this.onerror=null; this.src='assets/fallback.svg'">
+            </div>
+            <span class="vehicle-stack-name">Model X</span>
+          </div>
+
+          <!-- Model Y -->
+          <div class="vehicle-stack-item" data-model="modelY">
+            <div class="vehicle-stack-thumb">
+              <img src="assets/model-y-thumb.svg" alt="Model Y" onerror="this.onerror=null; this.src='assets/fallback.svg'">
+            </div>
+            <span class="vehicle-stack-name">Model Y</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Layer 7: Single Feature-Cards Container with EXACTLY FOUR Cards (z-index: 30) -->
+      <div class="hero-feature-cards-container">
+        <div class="feature-cards-grid">
+          <!-- Card 1: Performance -->
+          <div class="feature-3d-card" data-target-section="performance-section">
+            <div class="card-bg-image-wrapper">
+              <img class="card-bg-image" src="assets/performance.svg" alt="Performance" onerror="this.onerror=null; this.src='assets/fallback.svg'">
+              <div class="card-gradient-tint"></div>
+              <div class="card-reflection"></div>
+            </div>
+            <div class="card-inner-content">
+              <div class="card-text-group">
+                <h3 class="card-title">Performance</h3>
+                <p class="card-desc">Unmatched acceleration and all-wheel control.</p>
+              </div>
+              <div class="card-arrow-circle">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Technology -->
+          <div class="feature-3d-card" data-target-section="autonomy-section">
+            <div class="card-bg-image-wrapper">
+              <img class="card-bg-image" src="assets/technology.svg" alt="Technology" onerror="this.onerror=null; this.src='assets/fallback.svg'">
+              <div class="card-gradient-tint"></div>
+              <div class="card-reflection"></div>
+            </div>
+            <div class="card-inner-content">
+              <div class="card-text-group">
+                <h3 class="card-title">Technology</h3>
+                <p class="card-desc">A smarter, more connected driving experience.</p>
+              </div>
+              <div class="card-arrow-circle">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Range -->
+          <div class="feature-3d-card" data-target-section="charging-section">
+            <div class="card-bg-image-wrapper">
+              <img class="card-bg-image" src="assets/range.svg" alt="Range" onerror="this.onerror=null; this.src='assets/fallback.svg'">
+              <div class="card-gradient-tint"></div>
+              <div class="card-reflection"></div>
+            </div>
+            <div class="card-inner-content">
+              <div class="card-text-group">
+                <h3 class="card-title">Range</h3>
+                <p class="card-desc">Go further, with industry-leading efficiency.</p>
+              </div>
+              <div class="card-arrow-circle">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Design -->
+          <div class="feature-3d-card" data-target-section="interior-section">
+            <div class="card-bg-image-wrapper">
+              <img class="card-bg-image" src="assets/design.svg" alt="Design" onerror="this.onerror=null; this.src='assets/fallback.svg'">
+              <div class="card-gradient-tint"></div>
+              <div class="card-reflection"></div>
+            </div>
+            <div class="card-inner-content">
+              <div class="card-text-group">
+                <h3 class="card-title">Design</h3>
+                <p class="card-desc">A silhouette built for a sustainable future.</p>
+              </div>
+              <div class="card-arrow-circle">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE FLEET SHOWROOM -->
+    <section id="showroom" class="section-wrapper">
+      <div style="text-align: center; max-width: 760px; margin: 0 auto;">
+        <span class="section-eyebrow">WORLD-CLASS LUXURY TECH</span>
+        <h2 class="section-title">The Tesla Showroom</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">
+          Experience pure electric engineering with class-leading acceleration, unmatched thermal efficiency, and timeless aerodynamic silhouettes.
+        </p>
+      </div>
+
+      <div class="showroom-carousel-container">
+        <div class="showroom-model-tabs">
+          <button class="showroom-tab-btn active" data-showroom-model="modelS">Model S</button>
+          <button class="showroom-tab-btn" data-showroom-model="model3">Model 3</button>
+          <button class="showroom-tab-btn" data-showroom-model="modelX">Model X</button>
+          <button class="showroom-tab-btn" data-showroom-model="modelY">Model Y</button>
+          <button class="showroom-tab-btn" data-showroom-model="cybertruck">Cybertruck</button>
+        </div>
+
+        <div class="showroom-vehicle-stage">
+          <img id="showroom-vehicle-img" class="showroom-display-vehicle" src="hero-clean.jpg" alt="Tesla Showroom Model" onerror="this.onerror=null; this.src='picture.png'">
+        </div>
+
+        <div class="showroom-specs-panel">
+          <div class="showroom-spec-box">
+            <span id="showroom-accel" class="showroom-spec-num">1.99s</span>
+            <span class="showroom-spec-sub">0–60 mph</span>
+          </div>
+          <div class="showroom-spec-box">
+            <span id="showroom-range" class="showroom-spec-num">405 mi</span>
+            <span class="showroom-spec-sub">Range (EPA est.)</span>
+          </div>
+          <div class="showroom-spec-box">
+            <span id="showroom-speed" class="showroom-spec-num">200 mph</span>
+            <span class="showroom-spec-sub">Top Speed</span>
+          </div>
+          <div class="showroom-spec-box">
+            <span id="showroom-power" class="showroom-spec-num">1,020 hp</span>
+            <span class="showroom-spec-sub">Peak Power</span>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 0.5rem;">
+          <a href="#configurator" class="btn-primary">Configure This Vehicle</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PERFORMANCE & POWERTRAIN (Interactive Torque Canvas) -->
+    <section id="performance-section" class="section-wrapper">
+      <div class="feature-split-section">
+        <div class="feature-content-box">
+          <span class="feature-tag">TRI-MOTOR ALL-WHEEL DRIVE</span>
+          <h2 class="section-title">Beyond Ludicrous. Pure Physical Dominance.</h2>
+          <p class="section-subtitle">
+            Three high-performance motors with carbon-sleeved rotors deliver instantaneous torque vectoring to each wheel. Power delivery is managed at microsecond frequencies, providing total traction under any acceleration or cornering load.
+          </p>
+
+          <div style="margin-top: 2rem; display: flex; gap: 2.5rem;">
+            <div>
+              <div style="font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; color: #fff;">1.99 s*</div>
+              <div style="font-size: 0.78rem; color: var(--text-secondary);">0-60 mph with rollout subtracted</div>
+            </div>
+            <div>
+              <div style="font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; color: #fff;">9.23 s</div>
+              <div style="font-size: 0.78rem; color: var(--text-secondary);">1/4 Mile @ 155 mph</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-visual-container">
+          <canvas id="torque-canvas"></canvas>
+          <div class="canvas-controls-overlay">
+            <div class="mode-pills">
+              <button class="mode-pill" data-mode="chill">Chill</button>
+              <button class="mode-pill" data-mode="sport">Sport</button>
+              <button class="mode-pill active" data-mode="plaid">Plaid</button>
+            </div>
+            <div class="canvas-status-badge">PLAID TORQUE ENGAGED</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AUTONOMY & TESLA VISION (Interactive Perception HUD Canvas) -->
+    <section id="autonomy-section" class="section-wrapper">
+      <div class="feature-split-section reverse">
+        <div class="feature-content-box">
+          <span class="feature-tag">NEURAL NET PERCEPTION</span>
+          <h2 class="section-title">Full Self-Driving (Supervised)</h2>
+          <p class="section-subtitle">
+            Tesla Vision relies on 360-degree high-definition camera arrays and end-to-end deep neural networks trained on billions of real-world miles. The system perceives distance, velocity, lane geometry, and pedestrians directly from pure photon input.
+          </p>
+
+          <div style="margin-top: 1.8rem; display: flex; flex-direction: column; gap: 0.8rem;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span style="color: var(--accent-cyan); font-weight: 700;">360°</span>
+              <span style="font-size: 0.86rem; color: var(--text-secondary);">Continuous visual coverage up to 250 meters range</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span style="color: var(--accent-cyan); font-weight: 700;">144 TOPS</span>
+              <span style="font-size: 0.86rem; color: var(--text-secondary);">Hardware 4 neural processing computer with redundant chips</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-visual-container">
+          <canvas id="vision-canvas"></canvas>
+          <div class="vision-hud-overlay">
+            <div>TESLA VISION // HW4 ACTIVE</div>
+            <div>PERCEPTION CONFIDENCE: 99.8%</div>
+            <div>END-TO-END NEURAL NET: ENGAGED</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERIOR COCKPIT (Interactive Hotspots) -->
+    <section id="interior-section" class="section-wrapper">
+      <div style="text-align: center; max-width: 760px; margin: 0 auto;">
+        <span class="section-eyebrow">AIRCRAFT-INSPIRED LUXURY</span>
+        <h2 class="section-title">Interior of the Future</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">
+          Minimalist architecture wrapped in premium materials, hidden tri-zone acoustic air vents, and high-performance in-car computing.
+        </p>
+      </div>
+
+      <div class="interior-hotspots-container">
+        <img src="assets/technology.svg" alt="Tesla Cockpit Showcase" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.onerror=null; this.src='assets/fallback.svg'">
+
+        <!-- Hotspot 1: 17" Screen -->
+        <div class="hotspot-point" style="top: 38%; left: 49%;" aria-label="17-inch Display Hotspot">
+          <div class="hotspot-tooltip">
+            <div class="hotspot-title">17” Cinematic Display</div>
+            <div class="hotspot-desc">2200 x 1300 resolution with true color fidelity, ultra-responsive touch, and tilt adjustment.</div>
+          </div>
+        </div>
+
+        <!-- Hotspot 2: Yoke Steering -->
+        <div class="hotspot-point" style="top: 65%; left: 18%;" aria-label="Yoke Steering Hotspot">
+          <div class="hotspot-tooltip">
+            <div class="hotspot-title">Yoke Steering Architecture</div>
+            <div class="hotspot-desc">Unobstructed view of the digital road ahead with capacitive touch stalks.</div>
+          </div>
+        </div>
+
+        <!-- Hotspot 3: Climate -->
+        <div class="hotspot-point" style="top: 65%; left: 75%;" aria-label="Hidden Climate Airflow Hotspot">
+          <div class="hotspot-tooltip">
+            <div class="hotspot-title">Hidden Tri-Zone Climate</div>
+            <div class="hotspot-desc">Cabin airflow is precisely steered digitally from the center display without physical vent slats.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BATTERY ARCHITECTURE & SAFETY -->
+    <section id="battery-section" class="section-wrapper">
+      <div class="feature-split-section">
+        <div class="feature-content-box">
+          <span class="feature-tag">STRUCTURAL CELL PACK</span>
+          <h2 class="section-title">Built from the Floor Up for Protection</h2>
+          <p class="section-subtitle">
+            By integrating the high-voltage battery pack into the structural floor of the chassis, Tesla vehicles achieve near-zero center of gravity and unmatched torsional rigidity.
+          </p>
+
+          <div style="margin-top: 1.8rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem;">
+            <div style="border-left: 2px solid var(--border-glow); padding-left: 1rem;">
+              <div style="font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; color: #fff;">5-Star</div>
+              <div style="font-size: 0.78rem; color: var(--text-secondary);">Safety rating in every category</div>
+            </div>
+            <div style="border-left: 2px solid var(--border-glow); padding-left: 1rem;">
+              <div style="font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; color: #fff;">Lowest</div>
+              <div style="font-size: 0.78rem; color: var(--text-secondary);">Rollover risk of any production car</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-visual-container">
+          <img class="feature-visual-img" src="assets/performance.svg" alt="Structural Battery Pack Platform" onerror="this.onerror=null; this.src='assets/fallback.svg'">
+        </div>
+      </div>
+    </section>
+
+    <!-- CHARGING & RANGE CALCULATOR -->
+    <section id="charging-section" class="section-wrapper">
+      <div style="text-align: center; max-width: 760px; margin: 0 auto;">
+        <span class="section-eyebrow">GLOBAL SUPERCHARGER NETWORK</span>
+        <h2 class="section-title">Freedom to Travel Anywhere</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">
+          Over 50,000 Superchargers worldwide. Add up to 200 miles of range in just 15 minutes.
+        </p>
+      </div>
+
+      <div class="charging-calc-card">
+        <div class="calc-slider-group">
+          <div class="calc-label-row">
+            <span>Trip Distance</span>
+            <span id="trip-distance-display" class="calc-value-display">300 miles</span>
+          </div>
+          <input type="range" id="trip-slider" class="custom-range-slider" min="50" max="1000" step="25" value="300">
+        </div>
+
+        <div class="calc-results-grid">
+          <div>
+            <div style="font-size: 0.74rem; color: var(--text-secondary); text-transform: uppercase;">Est. Supercharge Time</div>
+            <div id="calc-charge-time" style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: #fff; margin-top: 4px;">15 min</div>
+          </div>
+          <div>
+            <div style="font-size: 0.74rem; color: var(--text-secondary); text-transform: uppercase;">Annual Gas Savings</div>
+            <div id="calc-gas-savings" style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--accent-cyan); margin-top: 4px;">$2,028</div>
+          </div>
+          <div>
+            <div style="font-size: 0.74rem; color: var(--text-secondary); text-transform: uppercase;">Superchargers on Route</div>
+            <div id="calc-superchargers" style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: #fff; margin-top: 4px;">3 on route</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE CONFIGURATOR -->
+    <section id="configurator" class="section-wrapper">
+      <div style="text-align: center; max-width: 760px; margin: 0 auto;">
+        <span class="section-eyebrow">DESIGN YOUR VEHICLE</span>
+        <h2 class="section-title">Tesla Configurator</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">
+          Customize powertrain performance, paint finishes, custom wheels, and Full Self-Driving capabilities with live pricing.
+        </p>
+      </div>
+
+      <div class="configurator-workspace">
+        <div class="config-stage">
+          <div class="config-stage-hud">
+            <span id="config-model-title" class="config-model-title">Model S</span>
+            <div id="config-model-subtitle" class="config-model-subtitle">Plaid Tri-Motor All-Wheel Drive</div>
+          </div>
+
+          <img id="config-vehicle-img" class="config-preview-vehicle" src="hero-clean.jpg" alt="Configured Vehicle Preview" onerror="this.onerror=null; this.src='picture.png'">
+        </div>
+
+        <div class="config-options-panel">
+          <!-- 1. Model -->
+          <div>
+            <div class="option-group-title">1. Vehicle Model</div>
+            <div class="option-group-sub">Select your vehicle platform</div>
+            <div class="showroom-model-tabs" style="justify-content: flex-start;">
+              <button class="showroom-tab-btn active" data-config-model="modelS">Model S</button>
+              <button class="showroom-tab-btn" data-config-model="model3">Model 3</button>
+              <button class="showroom-tab-btn" data-config-model="modelX">Model X</button>
+              <button class="showroom-tab-btn" data-config-model="modelY">Model Y</button>
+              <button class="showroom-tab-btn" data-config-model="cybertruck">Cybertruck</button>
+            </div>
+          </div>
+
+          <!-- 2. Trim -->
+          <div>
+            <div class="option-group-title">2. Powertrain Specification</div>
+            <div class="option-group-sub">Choose dual or tri-motor architecture</div>
+            <div class="trim-options-grid">
+              <div class="trim-card" data-trim="longRange">
+                <div class="trim-name">Long Range</div>
+                <div class="trim-price">Dual Motor AWD</div>
+              </div>
+              <div class="trim-card active" data-trim="plaid">
+                <div class="trim-name">Plaid</div>
+                <div class="trim-price">Tri-Motor AWD (+ $15,000)</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Color -->
+          <div>
+            <div class="option-group-title">3. Exterior Paint</div>
+            <div class="option-group-sub">Multi-coat automotive finish</div>
+            <div class="swatch-group">
+              <button class="color-swatch-btn" data-color="white" title="Pearl White Multi-Coat">
+                <div class="swatch-inner-circle"></div>
+              </button>
+              <button class="color-swatch-btn active" data-color="black" title="Solid Black">
+                <div class="swatch-inner-circle"></div>
+              </button>
+              <button class="color-swatch-btn" data-color="silver" title="Midnight Silver Metallic">
+                <div class="swatch-inner-circle"></div>
+              </button>
+              <button class="color-swatch-btn" data-color="blue" title="Deep Blue Metallic">
+                <div class="swatch-inner-circle"></div>
+              </button>
+              <button class="color-swatch-btn" data-color="red" title="Ultra Red">
+                <div class="swatch-inner-circle"></div>
+              </button>
+              <button class="color-swatch-btn" data-color="grey" title="Stealth Grey">
+                <div class="swatch-inner-circle"></div>
+              </button>
+            </div>
+            <div id="active-color-name" class="active-color-name">Solid Black</div>
+          </div>
+
+          <!-- 4. Wheels -->
+          <div>
+            <div class="option-group-title">4. Aerodynamic Wheels</div>
+            <div class="option-group-sub">Engineered for range and high-speed cornering</div>
+            <div class="wheel-options-grid">
+              <div class="wheel-card" data-wheel="tempest">
+                <div class="wheel-icon">19"</div>
+                <div>
+                  <div class="wheel-title">19" Tempest Wheels</div>
+                  <div class="wheel-price">Included</div>
+                </div>
+              </div>
+              <div class="wheel-card active" data-wheel="arachnid">
+                <div class="wheel-icon">21"</div>
+                <div>
+                  <div class="wheel-title">21" Arachnid Wheels</div>
+                  <div class="wheel-price">+ $4,500</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Interior -->
+          <div>
+            <div class="option-group-title">5. Interior Cabin Décor</div>
+            <div class="option-group-sub">Pristine sustainable surfaces with carbon fibre trim</div>
+            <div class="interior-options-row">
+              <div class="interior-btn active" data-interior="black">
+                <div class="interior-swatch"></div>
+                <span class="interior-label" style="font-size: 0.74rem; color: var(--text-secondary);">All Black</span>
+              </div>
+              <div class="interior-btn" data-interior="white">
+                <div class="interior-swatch"></div>
+                <span class="interior-label" style="font-size: 0.74rem; color: var(--text-secondary);">Black & White</span>
+              </div>
+              <div class="interior-btn" data-interior="cream">
+                <div class="interior-swatch"></div>
+                <span class="interior-label" style="font-size: 0.74rem; color: var(--text-secondary);">Cream</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. FSD -->
+          <div>
+            <div class="option-group-title">6. Autopilot Capabilities</div>
+            <div class="option-group-sub">Hardware 4 Active Perception</div>
+            <div class="fsd-feature-card active">
+              <div class="fsd-checkbox">✓</div>
+              <div>
+                <div style="font-weight: 600; color: #fff; font-size: 0.9rem;">Full Self-Driving (Supervised)</div>
+                <div style="font-size: 0.76rem; color: var(--text-secondary); margin-top: 3px;">
+                  Automatic steering on city streets, smart lane changes, and traffic sign recognition.
+                </div>
+                <div style="font-size: 0.8rem; color: var(--accent-cyan); font-weight: 600; margin-top: 4px;">+ $8,000</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="config-summary-bar">
+            <div class="price-breakdown-row">
+              <div>
+                <div style="font-size: 0.76rem; color: var(--text-secondary); text-transform: uppercase;">Vehicle Total Price</div>
+                <div id="config-total-price" class="total-price-tag">$103,990</div>
+              </div>
+              <div id="config-monthly-est" class="monthly-est-tag">Est. $1,444/mo</div>
+            </div>
+
+            <button class="config-checkout-btn open-checkout-trigger">Review & Complete Order</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHECKOUT MODAL WINDOW -->
+    <div id="checkout-modal" class="modal-overlay" aria-modal="true" role="dialog">
+      <div class="modal-container">
+        <button id="modal-close-btn" class="modal-close-btn" aria-label="Close Modal">&times;</button>
+        <h3 class="modal-title">Complete Your Order</h3>
+        <p class="modal-subtitle">Reserve your custom build today. Est. delivery in 2–4 weeks.</p>
+
+        <div class="modal-order-summary">
+          <div class="summary-line">
+            <span>Vehicle</span>
+            <span id="modal-car-name">Model S</span>
+          </div>
+          <div class="summary-line">
+            <span>Specification</span>
+            <span id="modal-trim-name">Plaid Tri-Motor</span>
+          </div>
+          <div class="summary-line">
+            <span>Paint</span>
+            <span id="modal-paint-name">Solid Black</span>
+          </div>
+          <div class="summary-line">
+            <span>Full Self-Driving</span>
+            <span style="color: var(--accent-cyan);">Included</span>
+          </div>
+          <div class="summary-line total">
+            <span>Total Vehicle Price</span>
+            <span id="modal-total-due">$103,990</span>
+          </div>
+          <div class="summary-line" style="font-size: 0.76rem; color: var(--text-secondary);">
+            <span>Due Today (Refundable Deposit)</span>
+            <span style="color: #fff; font-weight: 600;">$250</span>
+          </div>
+        </div>
+
+        <div class="pay-btn-group">
+          <button class="pay-button apple" data-original-text="Pay with Apple Pay">Pay with Apple Pay</button>
+          <button class="pay-button card" data-original-text="Pay with Credit Card">Pay with Credit Card</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SITE FOOTER -->
+    <footer id="site-footer">
+      <div class="footer-content">
+        <div class="footer-links-row">
+          <a href="#hero" class="footer-link">Tesla © 2026</a>
+          <a href="#privacy" class="footer-link">Privacy & Legal</a>
+          <a href="#recalls" class="footer-link">Vehicle Recalls</a>
+          <a href="#contact" class="footer-link">Contact</a>
+          <a href="#news" class="footer-link">News</a>
+          <a href="#careers" class="footer-link">Careers</a>
+        </div>
+
+        <div class="footer-actions-row">
+          <button id="cinematic-loop-btn" class="footer-loop-btn" aria-label="Return to Top Cinematic Loop">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+            <span>Continuous Loop // Return to Top</span>
+          </button>
+          <button id="replay-intro-btn" class="footer-replay-btn">Replay Intro Animation</button>
+        </div>
+
+        <div class="footer-copyright">
+          Tesla luxury automotive digital experience. Clean single-instance layer architecture.
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Application Engine -->
+  <script src="app.js"></script>
+</body>
+</html>

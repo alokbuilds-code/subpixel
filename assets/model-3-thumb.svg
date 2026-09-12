@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 70" width="120" height="70">
+  <rect width="120" height="70" rx="8" fill="#0b0d12"/>
+  <path d="M 14 45 C 18 39 28 37 38 34 C 46 28 58 27 74 28 C 86 30 96 37 104 43 C 108 45 108 48 104 48 L 16 48 C 13 48 12 46 14 45 Z" fill="#3f4553" stroke="#6b7280" stroke-width="1"/>
+  <path d="M 40 33 C 48 29 58 28 72 29 C 80 30 86 34 92 38 L 42 38 Z" fill="#0f172a"/>
+  <circle cx="18" cy="44" r="2" fill="#ffffff"/>
+  <circle cx="30" cy="48" r="7" fill="#181a20" stroke="#71717a" stroke-width="2"/>
+  <circle cx="90" cy="48" r="7" fill="#181a20" stroke="#71717a" stroke-width="2"/>
+  <text x="60" y="62" fill="#ffffff" font-family="sans-serif" font-size="7" font-weight="600" text-anchor="middle" letter-spacing="1">MODEL 3</text>
+</svg>
