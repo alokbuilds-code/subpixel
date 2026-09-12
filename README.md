@@ -4,6 +4,10 @@
 
 > **A viewport-driven 60 FPS cinematic camera rig featuring multi-plane stereoscopic parallax, forward Z-axis dolly translation, rotational perspective dissipation (`rotateX`), and photographic depth-of-field blur — architected entirely atop hardware-composited CSS 3D context matrixing and sub-pixel LERP physics with zero runtime bundle overhead.**
 
+
+https://subpixel-three.vercel.app/
+
+
 [![Vanilla JS](https://img.shields.io/badge/Stack-Vanilla%20ES6%2B-black?style=for-the-badge&logo=javascript&logoColor=F7DF1E)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![CSS3 3D](https://img.shields.io/badge/Graphics-CSS3%203D%20Transforms-black?style=for-the-badge&logo=css3&logoColor=1572B6)](https://www.w3.org/TR/css-transforms-2/)
 [![Canvas API](https://img.shields.io/badge/Telemetry-HTML5%20Canvas-black?style=for-the-badge&logo=html5&logoColor=E34F26)](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)
@@ -106,30 +110,7 @@ User Scroll Event 🖱️
 └── 📜 README.md           # Documentation
 ```
 
----
 
-## 🚀 Quickstart & Local Setup
-
-Zero build tools, zero dependencies, zero npm packages needed.
-
-```bash
-# 1. Clone the repository
-git clone https://github.com/your-username/photonic-dolly.git
-
-# 2. Enter directory
-cd photonic-dolly
-
-# 3. Serve via any static web server
-# Python 3
-python -m http.server 3000
-
-# Node / npx
-npx serve .
-
-# Or simply open index.html in your browser!
-```
-
----
 
 ## 💎 Performance & Engineering Restraint
 
